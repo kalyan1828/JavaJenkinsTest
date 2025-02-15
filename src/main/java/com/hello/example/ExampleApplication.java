@@ -9,5 +9,9 @@ public class ExampleApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ExampleApplication.class, args);
 	}
+	@Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+        return builder.sources(SpringtomcatApplication.class);
+    }
 
 }
